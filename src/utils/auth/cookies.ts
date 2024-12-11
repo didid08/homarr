@@ -8,7 +8,7 @@ export const createCookiesWithDefaultOptions = (useSecureCookies: boolean) => {
       name: `next-auth.session-token`,
       options: {
         httpOnly: true,
-        sameSite: 'lax',
+        sameSite: 'none',
         path: '/',
         secure: useSecureCookies,
       },
@@ -17,7 +17,7 @@ export const createCookiesWithDefaultOptions = (useSecureCookies: boolean) => {
       name: `${cookiePrefix}next-auth.callback-url`,
       options: {
         httpOnly: true,
-        sameSite: 'lax',
+        sameSite: 'none',
         path: '/',
         secure: useSecureCookies,
       },
@@ -28,7 +28,7 @@ export const createCookiesWithDefaultOptions = (useSecureCookies: boolean) => {
       name: `${useSecureCookies ? '__Host-' : ''}next-auth.csrf-token`,
       options: {
         httpOnly: true,
-        sameSite: 'lax',
+        sameSite: 'none',
         path: '/',
         secure: useSecureCookies,
       },
@@ -37,7 +37,7 @@ export const createCookiesWithDefaultOptions = (useSecureCookies: boolean) => {
       name: `${cookiePrefix}next-auth.pkce.code_verifier`,
       options: {
         httpOnly: true,
-        sameSite: 'lax',
+        sameSite: 'none',
         path: '/',
         secure: useSecureCookies,
         maxAge: 60 * 15, // 15 minutes in seconds
@@ -47,7 +47,7 @@ export const createCookiesWithDefaultOptions = (useSecureCookies: boolean) => {
       name: `${cookiePrefix}next-auth.state`,
       options: {
         httpOnly: true,
-        sameSite: 'lax',
+        sameSite: 'none',
         path: '/',
         secure: useSecureCookies,
         maxAge: 60 * 15, // 15 minutes in seconds
@@ -57,7 +57,7 @@ export const createCookiesWithDefaultOptions = (useSecureCookies: boolean) => {
       name: `${cookiePrefix}next-auth.nonce`,
       options: {
         httpOnly: true,
-        sameSite: 'lax',
+        sameSite: 'none',
         path: '/',
         secure: useSecureCookies,
       },
